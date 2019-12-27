@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Login</string>
+
+    <string-array name="gender">
+        <item>Homme</item>
+        <item>Femme</item>
+    </string-array>
+
+    <string-array name="typeofuser">
+        <item>Patient</item>
+        <item>Doctor</item>
+        <item>Ministère de santé</item>
+    </string-array>
+</resources>

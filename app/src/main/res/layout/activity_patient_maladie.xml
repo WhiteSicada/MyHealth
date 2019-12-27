@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/relativelayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/MyProfileImageDoctor"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/circle"
+                android:padding="3dp"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.096"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tvProfileNameDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="sans-serif-light"
+                android:text="man"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.224"
+                app:layout_constraintStart_toEndOf="@+id/MyProfileImageDoctor"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/getintouch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="25dp"
+                android:background="@color/forground"
+                android:padding="10dp"
+                android:text="Get in touch !"
+                android:textColor="@color/background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.714"
+                app:layout_constraintStart_toEndOf="@+id/MyProfileImageDoctor"
+                app:layout_constraintTop_toBottomOf="@+id/tvProfileNameDoctor"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativelayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="192dp"
+        android:layout_below="@+id/relativelayout1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="62dp">
+
+        <TextView
+            android:id="@+id/tvMaladieName"
+            android:layout_width="83dp"
+            android:layout_height="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="154dp"
+            android:text="dsfsdcs"
+            app:layout_constraintEnd_toStartOf="@+id/tvDegreeMaladie"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDegreeMaladie"
+            android:layout_width="87dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="49dp"
+            android:layout_marginTop="23dp"
+            android:layout_toEndOf="@+id/tvMaladieName"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.979"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDescriptionMaladie"
+            android:layout_width="215dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/tvDegreeMaladie"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="40dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.172"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMaladieName" />
+
+        <TextView
+            android:id="@+id/tvMed"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginBottom="54dp"
+            android:text="Medicaments"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionMaladie" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelListOfMeds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativelayout2"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp">
+
+        <ListView
+            android:id="@+id/ListOfMeds"
+            android:layout_width="312dp"
+            android:layout_height="230dp" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
